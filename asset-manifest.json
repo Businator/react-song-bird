@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5b8f1b54.css",
+    "main.js": "/static/js/main.afe48fec.js",
+    "static/media/logo.svg": "/static/media/logo.c3c0be4634884b5beb61074f920c2710.svg",
+    "static/media/bird.jpg": "/static/media/bird.cbd08c29fc4a2f0108e8.jpg",
+    "index.html": "/index.html",
+    "main.5b8f1b54.css.map": "/static/css/main.5b8f1b54.css.map",
+    "main.afe48fec.js.map": "/static/js/main.afe48fec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b8f1b54.css",
+    "static/js/main.afe48fec.js"
+  ]
+}
