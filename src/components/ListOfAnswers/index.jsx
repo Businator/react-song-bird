@@ -1,0 +1,1 @@
+export { ListOfAnswers } from './ListOfAnswers';

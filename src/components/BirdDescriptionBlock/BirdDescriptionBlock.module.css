@@ -1,0 +1,23 @@
+.container {
+  width: 40%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #444;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.topContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  width: 220px;
+  height: 170px;
+  border-radius: 5px;
+  object-fit: contain;
+}

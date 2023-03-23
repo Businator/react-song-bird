@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.answersBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
