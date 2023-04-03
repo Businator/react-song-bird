@@ -50,8 +50,8 @@ export const ListOfAnswers = () => {
           {context.listOfBirds.map((bird) => (
             <Answer
               key={bird.id}
-              birdName={bird.name}
               stopСountingState={[stopСounting, setStopСounting]}
+              bird={bird}
             />
           ))}
         </ul>

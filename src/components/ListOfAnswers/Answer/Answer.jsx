@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Answer.module.css';
 import { useOutletContext } from 'react-router-dom';
 
-export const Answer = ({ birdName, stopСountingState }) => {
+export const Answer = ({ bird, stopСountingState }) => {
   const [indicator, setIndicator] = useState(styles.indicator);
   const [stopСounting, setStopСounting] = stopСountingState;
 
@@ -13,8 +13,10 @@ export const Answer = ({ birdName, stopСountingState }) => {
   }, [context.guessedBird]);
 
   const selectAnswerHandler = () => {
+    context.setIsAnswerSelected(true);
+    context.setSelectedBird(bird);
     if (
-      birdName === context.guessedBird.name &&
+      bird.name === context.guessedBird.name &&
       !stopСounting &&
       context.count !== 0
     ) {
@@ -25,7 +27,7 @@ export const Answer = ({ birdName, stopСountingState }) => {
       setStopСounting(true);
     }
     if (
-      birdName !== context.guessedBird.name &&
+      bird.name !== context.guessedBird.name &&
       !stopСounting &&
       context.count !== 0
     ) {
@@ -39,7 +41,7 @@ export const Answer = ({ birdName, stopСountingState }) => {
   return (
     <li className={styles.answer} onClick={selectAnswerHandler}>
       <span className={indicator}></span>
-      {birdName}
+      {bird.name}
     </li>
   );
 };
