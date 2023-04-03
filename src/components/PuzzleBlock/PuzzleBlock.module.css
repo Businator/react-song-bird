@@ -8,8 +8,8 @@
 }
 
 .img {
-  width: 320px;
-  height: 220px;
+  width: 20rem;
+  height: 13rem;
   border-radius: 5px;
   object-fit: contain;
 }

@@ -12,8 +12,13 @@ body {
   background-color: #222;
 }
 
-.active {
-  color: #008966;
+main {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
 }
 
 header,
@@ -49,6 +54,7 @@ a:hover {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 #root {
@@ -70,4 +76,14 @@ button:hover {
 }
 button:disabled {
   opacity: 0.4;
+}
+
+.active {
+  color: #008966;
+}
+
+@media (max-width: 769px) {
+  html {
+    font-size: 12px;
+  }
 }
