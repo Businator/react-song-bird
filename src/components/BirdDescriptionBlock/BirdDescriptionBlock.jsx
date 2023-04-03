@@ -17,13 +17,15 @@ export const BirdDescriptionBlock = () => {
     <>
       <div className={styles.topContent}>
         <img className={styles.img} src={image} alt="bird img" />
-        <div>
+        <div className={styles.nameBlock}>
           <h3>{name}</h3>
           <h4>{species}</h4>
-          <audio src={audio} controls></audio>
         </div>
       </div>
-      <p>{description}</p>
+      <div>
+        <audio src={audio} controls></audio>
+        <p>{description}</p>
+      </div>
     </>
   );
 
