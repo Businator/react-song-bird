@@ -16,12 +16,26 @@ export const App = () => {
   const [isСorrectAnswer, setIsСorrectAnswer] = useState(false);
   const [isDisabledButton, setIsDisabledButton] = useState(true);
 
-  useEffect(() => {
+  const chooseGuessedBird = () => {
     setListOfBirds(birdsDataEn[0]);
     setGuessedBird(
       birdsDataEn[0][Math.floor(Math.random() * birdsDataEn[0].length)]
     );
+  };
+
+  useEffect(() => {
+    chooseGuessedBird();
   }, []);
+
+  const newGame = () => {
+    chooseGuessedBird();
+    setScore(0);
+    setCount(5);
+    setQuestionNumber(0);
+    setIsAnswerSelected(false);
+    setIsСorrectAnswer(false);
+    setIsDisabledButton(true);
+  };
 
   const context = {
     listOfBirds,
@@ -42,6 +56,7 @@ export const App = () => {
     setIsСorrectAnswer,
     isDisabledButton,
     setIsDisabledButton,
+    newGame,
   };
 
   const changeQuestion = useCallback(() => {
@@ -56,8 +71,6 @@ export const App = () => {
   useEffect(() => {
     changeQuestion();
   }, [changeQuestion]);
-
-  console.log(guessedBird);
 
   return (
     <div className={style.app}>
