@@ -35,6 +35,7 @@ export const App = () => {
     setIsAnswerSelected(false);
     setIsСorrectAnswer(false);
     setIsDisabledButton(true);
+    setSelectedBird({});
   };
 
   const context = {

@@ -14,17 +14,16 @@ body {
 
 main {
   margin: 0 auto;
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 25px;
+  padding: 1.5rem;
 }
 
 header,
 footer {
   background-color: #303030;
-  padding: 20px;
+  padding: 1rem;
 }
 
 nav {
@@ -92,5 +91,14 @@ button:disabled {
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 481px) {
+  html {
+    font-size: 10px;
+  }
 }

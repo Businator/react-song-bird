@@ -8,8 +8,7 @@
 }
 
 .logo {
-  width: 200px;
-  height: 55px;
+  width: 12rem;
 }
 
 .linksBlock {
@@ -20,9 +19,16 @@
 }
 
 .github {
-  width: 80px;
+  width: 4rem;
 }
 
 .rsSchool {
-  width: 140px;
+  width: 10rem;
+}
+
+@media (max-width: 768px) {
+  .linksBlock {
+    width: auto;
+    gap: 1rem;
+  }
 }

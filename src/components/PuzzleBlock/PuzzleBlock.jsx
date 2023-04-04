@@ -1,8 +1,10 @@
 import React from 'react';
 
 import birdImg from '../../assets/images/bird.jpg';
-import styles from './PuzzleBlock.module.css';
 import { useOutletContext } from 'react-router-dom';
+import { AudioPlayer } from '../AudioPlayer/AudioPlayer';
+
+import styles from './PuzzleBlock.module.css';
 
 export const PuzzleBlock = () => {
   const context = useOutletContext();
@@ -18,7 +20,7 @@ export const PuzzleBlock = () => {
       <div>
         <h2>Score: {context.score}</h2>
         <h2>{!context.isСorrectAnswer ? '******' : name}</h2>
-        <audio src={audio} controls></audio>
+        <AudioPlayer audio={audio} forPause={context.guessedBird} />
       </div>
     </div>
   );

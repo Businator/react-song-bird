@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { BirdDescriptionBlock } from '../../components/BirdDescriptionBlock/BirdDescriptionBlock';
 import { ListOfBirdSpecies } from '../../components/ListOfBirdSpecies/';
@@ -5,7 +6,6 @@ import { PuzzleBlock } from '../../components/PuzzleBlock';
 import { ListOfAnswers } from './../../components/ListOfAnswers/ListOfAnswers';
 
 import styles from './Quiz.module.css';
-import { useState } from 'react';
 
 export const Quiz = () => {
   const context = useOutletContext();
@@ -21,10 +21,10 @@ export const Quiz = () => {
       context.setQuestionNumber((prevState) => (prevState += 1));
       context.setIsСorrectAnswer(false);
       context.setIsAnswerSelected(false);
-      context.setSelectedBird({});
       context.setIsDisabledButton(true);
       setStopСounting(false);
       context.setCount(5);
+      context.setSelectedBird({});
     }
   };
 

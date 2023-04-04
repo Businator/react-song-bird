@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './BirdDescriptionBlock.module.css';
 import { useOutletContext } from 'react-router-dom';
+import { AudioPlayer } from '../AudioPlayer/AudioPlayer';
 
 export const BirdDescriptionBlock = () => {
   const context = useOutletContext();
@@ -22,8 +23,8 @@ export const BirdDescriptionBlock = () => {
           <h4>{species}</h4>
         </div>
       </div>
-      <div>
-        <audio src={audio} controls></audio>
+      <div className={styles.actionBlock}>
+        <AudioPlayer audio={audio} forPause={context.selectedBird} />
         <p>{description}</p>
       </div>
     </>
