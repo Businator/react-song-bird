@@ -1,0 +1,44 @@
+.list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.birdSpecies {
+  width: calc(100 / 6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #00bc8c;
+}
+
+.birdSpecies:not(:last-child) {
+  border-right: 1px solid #008966;
+  border-bottom: 1px solid #008966;
+}
+
+.birdSpeciesActive {
+  width: calc(100 / 6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #008966;
+}
+
+@media (max-width: 568px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}

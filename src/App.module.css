@@ -1,0 +1,34 @@
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  width: 12rem;
+}
+
+.linksBlock {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github {
+  width: 4rem;
+}
+
+.rsSchool {
+  width: 10rem;
+}
+
+@media (max-width: 768px) {
+  .linksBlock {
+    width: auto;
+    gap: 1rem;
+  }
+}
